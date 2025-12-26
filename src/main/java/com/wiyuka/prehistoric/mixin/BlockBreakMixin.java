@@ -16,21 +16,24 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Mixin(ServerLevel.class)
 public abstract class BlockBreakMixin {
-    @Shadow public abstract List<ServerPlayer> players();
+
+    @Shadow
+    public abstract List<ServerPlayer> players();
 
     @Unique
-    private static ConcurrentHashMap<Integer, CallbackInfo> prehistoric$callbacks = new ConcurrentHashMap<>();
+    private static final ConcurrentHashMap<Integer, CallbackInfo> prehistoric$callbacks = new ConcurrentHashMap<>();
 
     @Inject(
-            method = "tickBlock",
-            at = @At("RETURN")
+        method = "tickBlock",
+        at = @At("RETURN")
     )
     private void tickBlock(CallbackInfo ci) {
         try {
             Util.info("Block Ticked!");
             prehistoric$callbacks.put(ci.hashCode(), ci);
-        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-                    throw new RuntimeException(e);
+        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException |
+                 IllegalAccessException e) {
+            throw new RuntimeException(e);
         }
     }
 }

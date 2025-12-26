@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 // Demonstrates how to use Neo's config APIs
 @EventBusSubscriber(modid = Prehistoric.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class Config {
+
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
     private static final ModConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER.comment("Whether to log the dirt block on common setup").define("logDirtBlock", true);

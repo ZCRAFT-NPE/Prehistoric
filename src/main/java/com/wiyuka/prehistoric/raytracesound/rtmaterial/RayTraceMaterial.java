@@ -3,6 +3,7 @@ package com.wiyuka.prehistoric.raytracesound.rtmaterial;
 import org.joml.Vector3f;
 
 public class RayTraceMaterial {
+
     public float spread = 0.5f;
     public float maxAngle = 0.1f;
     public int samplingTimes = 10;

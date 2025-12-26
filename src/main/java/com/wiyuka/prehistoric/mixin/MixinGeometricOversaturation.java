@@ -14,6 +14,7 @@ import java.util.Random;
 
 @Mixin(Frustum.class)
 public class MixinGeometricOversaturation {
+
     @Unique
     private final Random prehistoric$globalRandom = new Random();
 

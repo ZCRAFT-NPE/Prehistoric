@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "BlockBreakMixin",
-    "LevelMixin"
+    "LevelMixin",
+    "LogUtilsMixin"
   ],
   "client": [
     "MixinGeometricOversaturation",

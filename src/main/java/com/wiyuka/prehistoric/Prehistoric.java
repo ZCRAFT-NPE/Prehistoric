@@ -31,10 +31,12 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Prehistoric.MODID)
 public class Prehistoric {
+
     // Define mod id in a common place for everything to reference
     public static final String MODID = "prehistoric";
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -104,6 +106,7 @@ public class Prehistoric {
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
