@@ -4,9 +4,11 @@
   "package": "com.wiyuka.prehistoric.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BlockBreakMixin",
     "LevelMixin"
   ],
   "client": [
+    "RenderMixin"
   ],
   "injectors": {
     "defaultRequire": 1
