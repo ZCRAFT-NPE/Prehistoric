@@ -18,6 +18,7 @@ import static com.wiyuka.prehistoric.util.MathHelper.averageSample;
 
 @Mixin(Mth.class)
 public class MthMixin {
+
     @Unique
     private static final MathContext MATH_CONTEXT = MathContext.DECIMAL128;
     

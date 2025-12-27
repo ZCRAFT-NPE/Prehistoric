@@ -10,9 +10,11 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 @EventBusSubscriber
 public class CommonEvents {
+
     private static final SimpleCommandExceptionType ERROR_FAILED = new SimpleCommandExceptionType(Component.translatable("commands.save.failed"));
 
     static int tickCount = 0;
+
     @SubscribeEvent
     public static void serverTick(ServerTickEvent.Post event) {
         if (++tickCount % 5 == 0) {
