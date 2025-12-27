@@ -4,6 +4,7 @@
   "package": "com.wiyuka.prehistoric.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "MinecraftMixin",
     "BlockBreakMixin",
     "LevelMixin",
     "LogUtilsMixin",
@@ -12,6 +13,7 @@
   ],
   "client": [
     "MixinGeometricOversaturation",
+    "GameRendererMixin",
     "RenderMixin"
   ],
   "injectors": {
