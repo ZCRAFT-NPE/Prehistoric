@@ -6,7 +6,8 @@
   "mixins": [
     "BlockBreakMixin",
     "LevelMixin",
-    "LogUtilsMixin"
+    "LogUtilsMixin",
+    "MthMixin"
   ],
   "client": [
     "MixinGeometricOversaturation",
